@@ -53,6 +53,12 @@ class Ejercicio4Test {
         
         return matriz;
 	}
+	
+	@Test
+	void claseEjercicio4(){
+		Ejercicio4 ejer = new Ejercicio4();
+		assertNotEquals(ejer, null);
+	}
 
 	@ParameterizedTest
 	@CsvFileSource(files = "data/matriz-enteros.csv")
