@@ -35,6 +35,7 @@ public class Ejercicio2 {
 	        } else if (Character.isDigit(c)) {
 	            contieneDigito = true;
 	        }
+	        
 
 	        // Si ya se cumple la condición de tener una mayúscula, una minúscula y un dígito, podemos salir del bucle
 	        if (contieneMayuscula && contieneMinuscula && contieneDigito) {

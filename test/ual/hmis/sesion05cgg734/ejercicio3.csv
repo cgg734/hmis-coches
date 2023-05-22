@@ -1,0 +1,7 @@
+1234, password demasiado corto
+abcd, password demasiado corto
+abc123, ********
+abcdefgh, ********
+password1234, ************
+thisIsAPassword, ************
+thisIsALongPasswordThatExceedsTheMaximumLength, password demasiado largo
