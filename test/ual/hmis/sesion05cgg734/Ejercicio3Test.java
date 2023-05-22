@@ -9,7 +9,7 @@ public class Ejercicio3Test {
 	
 	@ParameterizedTest
     @CsvFileSource(
-    		resources = "ejercicio3.csv")
+    		files = "data/ejercicio3.csv")
     void testEnmascararPassword(String password, String expected) {
         Ejercicio3 ejercicio = new Ejercicio3();
         String actual = ejercicio.enmascararPassword(password);

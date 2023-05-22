@@ -7,9 +7,9 @@ public class Ejercicio3 {
 
 		if (length < 5) {
 			return "password demasiado corto";
-		} else if (length >= 5 && length <= 8) {
+		} else if ( length <= 8) {
 			return "********";
-		} else if (length >= 12 && length <= 40) {
+		} else if ( length <= 40) {
 			return "************";
 		} else
 			return "password demasiado largo";
