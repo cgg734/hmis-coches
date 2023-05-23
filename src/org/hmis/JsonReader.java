@@ -9,14 +9,16 @@ import com.google.gson.JsonParser;
 
 public class JsonReader {
 
-	public static Coche[] leerCochesJSON (String archivo) {
+	@SuppressWarnings("deprecation")
+	public static Coche[] leerCochesJSON(String archivo) {
 
 		Coche[] coches = null;
         Gson gson = new Gson();
+        JsonParser parser = new JsonParser();
 
-        try (java.io.Reader reader = new FileReader(archivo)) {
+        try (FileReader reader = new FileReader(archivo)) {
             // Parsear el archivo JSON en un objeto de la clase JsonObject
-            JsonObject jsonObject =  JsonParser.parseReader(reader).getAsJsonObject();
+            JsonObject jsonObject = parser.parse(reader).getAsJsonObject();
 
             // Obtener el arreglo de objetos "coches"
             JsonArray cochesJson = jsonObject.getAsJsonArray("coches");
@@ -24,11 +26,10 @@ public class JsonReader {
             // Crear un arreglo de la clase Coche y llenarlo con los objetos del archivo JSON
             coches = gson.fromJson(cochesJson, Coche[].class);
 
-            
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return coches;
-        
 	}
 }
